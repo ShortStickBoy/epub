@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,7 +18,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView tv_name;
     private Button butRead, butAllRead;
     private EditText etBookName;
     private ImageView iv;
@@ -27,14 +25,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //        StatusBarUtils.setFullScreen(this);
         setContentView(R.layout.activity_main);
-        butRead = (Button) findViewById(R.id.but_read);
-        butAllRead = (Button) findViewById(R.id.but_allread);
+        butRead = findViewById(R.id.but_read);
+        butAllRead = findViewById(R.id.but_allread);
         etBookName = findViewById(R.id.et_bookname);
 
         iv = findViewById(R.id.iv);
-        tv_name = findViewById(R.id.tv_name);
 
         butRead.setOnClickListener(this);
         butAllRead.setOnClickListener(this);
